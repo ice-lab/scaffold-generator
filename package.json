@@ -12,7 +12,9 @@
   },
   "scripts": {
     "test": "jest",
-    "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./"
+    "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./",
+    "ci": "npm run test && npm run lint",
+    "publish:packages": "ts-node ./scripts/publish.ts"
   },
   "husky-t": {
     "hooks": {
@@ -52,6 +54,7 @@
   },
   "devDependencies": {
     "@iceworks/spec": "^1.0.0",
+    "axios": "^0.21.0",
     "eslint": "^6.8.0",
     "husky": "^3.1.0",
     "jest": "^24.9.0"
