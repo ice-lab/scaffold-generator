@@ -1,0 +1,59 @@
+{
+  "name": "ice-scaffold-generator",
+  "version": "1.1.17",
+  "description": "scaffold generator",
+  "main": "lib/index.js",
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "bin": {
+    "generate": "./bin/generate.js"
+  },
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx ./"
+  },
+  "husky-t": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run test"
+    }
+  },
+  "author": "",
+  "linse": "ISC",
+  "dependencies": {
+    "@babel/generator": "^7.7.2",
+    "@babel/parser": "^7.7.3",
+    "@babel/traverse": "^7.7.2",
+    "@babel/types": "^7.7.2",
+    "chalk": "^3.0.0",
+    "commander": "^4.0.1",
+    "debug": "^4.1.1",
+    "deepmerge": "^4.2.2",
+    "ejs": "^2.7.2",
+    "eslint": "^6.8.0",
+    "fs-extra": "^8.1.0",
+    "fs-readdir-recursive": "^1.1.0",
+    "ice-npm-utils": "^1.3.0",
+    "inquirer": "^7.0.0",
+    "lodash": "^4.17.15",
+    "ora": "^4.0.3",
+    "prettier": "^1.19.1",
+    "request": "^2.88.0",
+    "request-progress": "^3.0.0",
+    "request-promise-native": "^1.0.8",
+    "rimraf": "^3.0.2",
+    "semver": "^6.3.0",
+    "sylvanas": "^0.4.2",
+    "tar": "^5.0.5",
+    "typescript": "^3.7.2",
+    "zlib": "^1.0.5"
+  },
+  "devDependencies": {
+    "@iceworks/spec": "^1.0.0",
+    "eslint": "^6.8.0",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0"
+  }
+}

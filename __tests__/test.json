@@ -1,0 +1,105 @@
+{
+  "layouts": [
+    {
+      "type": "builtIn",
+      "name": "BasicLayout",
+      "layoutConfig": {
+        "shell": {
+          "nav": {
+            "name": "PageNav",
+            "type": "builtIn"
+          },
+          "navHoz": [
+            {
+              "name": "GlobalSearch",
+              "type": "builtIn"
+            },
+            {
+              "name": "MessageNotification",
+              "source": "src/components/MessageNotification"
+            }
+          ],
+          "action": {
+            "name": "HeaderAvatar",
+            "source": "src/components/HeaderAvatar"
+          },
+          "branding": {
+            "name": "Logo",
+            "props": {
+              "image": "https://img.alicdn.com/tfs/TB1.ZBecq67gK0jSZFHXXa9jVXa-904-826.png",
+              "text": "Logo"
+            },
+            "type": "builtIn"
+          },
+          "footer": {
+            "name": "Footer",
+            "type": "builtIn"
+          }
+        },
+        "mode": "dark",
+        "fixHeader": true
+      }
+    },
+    {
+      "source": "@icedesign/grid-layout-block",
+      "targetDir": "src/layouts",
+      "name": "GridLayout"
+    }
+  ],
+  "menu": {
+    "asideMenu": [
+      {
+        "name": "Home",
+        "path": "/",
+        "icon": "smile",
+        "children": [
+          {
+            "icon": "smile",
+            "name": "Test",
+            "path": "/dashboard/monitor"
+          }
+        ]
+      },
+      {
+        "name": "About",
+        "path": "/about",
+        "icon": "account"
+      }
+    ],
+    "headerMenu": []
+  },
+  "routers": [
+    {
+      "path": "/",
+      "component": "BasicLayout",
+      "children": [
+        {
+          "path": "/dashboard",
+          "page": {
+            "name": "dashboard",
+            "blocks": {
+              "container": "block.common",
+              "packages": [["@icedesign/about-block", "@icedesign/ablity-items-block"], "@icedesign/article-list-block"]
+            }
+          }
+        },
+        {
+          "path": "/test",
+          "page": {
+            "name": "test",
+            "blocks": {
+              "packages": ["@icedesign/about-block", "@icedesign/address-info-block", "@icedesign/footer-block"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "files": [],
+  "i18n": true, 
+  "typescript": true,
+  "auth": true,
+  "store": "rematch",
+  "mock": true,
+  "theme": "@icedesign/theme"
+}
