@@ -1,8 +1,7 @@
 import ReactDOM from 'react-dom';
 import router from './router';
 import './global.scss';
-import LocaleProvider from '@/components/LocaleProvider';
-
+import LocaleProvider from "@/components/LocaleProvider";
 const ICE_CONTAINER = document.getElementById('ice-container');
 
 if (!ICE_CONTAINER) {

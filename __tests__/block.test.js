@@ -26,10 +26,10 @@ test('render common template', () => {
     pageProps: { gap: 0 },
     resultFile: 'expect.block.platten.js',
   }, {
-    blockList: [{ name: 'BlockA' }, { name: 'BlockB' }, { name: 'BlockC' }],
-    blocks: [{ name: 'BlockA' }, [{ name: 'BlockB' }, { name: 'BlockC' }]],
+      blockList: [{ name: 'BlockA' }, { name: 'BlockB' }, { name: 'BlockC' }],
+      blocks: [{ name: 'BlockA' }, [{ name: 'BlockB' }, { name: 'BlockC' }]],
     pageName: 'main',
-    pageProps: { gap: 20 },
+      pageProps: { gap: 20 },
     resultFile: 'expect.block.nets.js',
   }].forEach((blockConfig) => {
     const result = ejs.render(templateContent, blockConfig);
