@@ -1,9 +1,6 @@
-name: Auto Publisher
+name: ci
 
-on:
-  push:
-    branches:
-      - master
+on: [push]
 
 jobs:
   build-and-publish:
@@ -15,6 +12,7 @@ jobs:
           node-version: 10
           registry-url: https://registry.npmjs.org/
       - run: npm i
+      - run: npm run ci
       - run: npm run publish:packages
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

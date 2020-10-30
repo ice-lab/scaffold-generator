@@ -5,6 +5,11 @@ import { join } from 'path';
 import { spawnSync } from 'child_process';
 import { IPackageInfo, getPackageInfos } from './getPackageInfos';
 
+if (process.env.BRANCH_NAME !== 'master') {
+  console.log('Current branch', process.env.BRANCH_NAME);
+  process.exit(0);
+}
+
 function publish(pkg: string, version: string, directory: string): void {
   console.log('[PUBLISH]', `${pkg}@${version}`);
 

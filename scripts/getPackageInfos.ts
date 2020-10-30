@@ -22,8 +22,8 @@ function checkVersionExists(pkg: string, version: string): Promise<boolean> {
 
 export async function getPackageInfos(): Promise<IPackageInfo[]> {
   const packageInfos: IPackageInfo[] = [];
-  const directory = __dirname;
-  const packageInfoPath = join(directory, 'package.json');
+  const directory = join(__dirname, '..');
+  const packageInfoPath = join(__dirname, '../package.json');
 
   const packageInfo = JSON.parse(readFileSync(packageInfoPath, 'utf8'));
   const packageName = packageInfo.name;
