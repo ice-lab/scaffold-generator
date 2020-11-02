@@ -4,10 +4,12 @@ const ejs = require('ejs');
 const prettier = require('prettier');
 const { getNpmTarball, getAndExtractTarball } = require('ice-npm-utils');
 
+jest.setTimeout(20 * 1000);
+
 test('download block', async () => {
   const npmName = '@icedesign/ability-introduction-block';
   const version = '3.0.1';
-  const registry = 'https://registry.npm.taobao.org';
+  const registry = 'https://registry.npmjs.org';
   const tarballUrl = await getNpmTarball(npmName, version, registry);
   const destDir = path.join(__dirname, './temp');
   await getAndExtractTarball(destDir, tarballUrl);
