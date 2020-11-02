@@ -15,7 +15,7 @@ test('download block', async () => {
   await getAndExtractTarball(destDir, tarballUrl);
   const pkg = fse.readJsonSync(path.join(destDir, 'package.json'));
   fse.removeSync(destDir);
-  expect(tarballUrl).toBe(`${registry}/${npmName}/download/${npmName}-${version}.tgz`);
+
   expect(pkg.name).toBe(npmName);
 });
 
