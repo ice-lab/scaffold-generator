@@ -47,10 +47,12 @@ const Auth = ({ children, authorities = [], hidden }) => {
     return (
       <Exception
         statusCode="403"
-        description={<div>
-          <p>抱歉，当前用户为 {authority || 'Guest'}, 没有权限访问该页面</p>
-          <p>您可以<Link to="/user/login">登录 Admin 用户</Link>再查看该页面</p>
-        </div>}
+        description={(
+          <div>
+            <p>抱歉，当前用户为 {authority || 'Guest'}, 没有权限访问该页面</p>
+            <p>您可以<Link to="/user/login">登录 Admin 用户</Link>再查看该页面</p>
+          </div>
+        )}
       />
     );
   }

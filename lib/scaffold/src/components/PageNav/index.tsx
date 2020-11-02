@@ -4,15 +4,15 @@ import { Link, withRouter } from 'ice';
 import { Nav } from '@alifd/next';
 import { asideMenuConfig } from '../../menuConfig';
 
-const SubNav = Nav.SubNav;
+const { SubNav } = Nav;
 const NavItem = Nav.Item;
 
 // mock the auth object
 // Ref: https://ice.work/docs/guide/advance/auth#%E5%88%9D%E5%A7%8B%E5%8C%96%E6%9D%83%E9%99%90%E6%95%B0%E6%8D%AE
 const auth = {
   admin: true,
-  guest: false
-}
+  guest: false,
+};
 
 export interface IMenuItem {
   name: string;
@@ -80,11 +80,11 @@ const Navigation = (props, context) => {
 
   useEffect(() => {
     const curSubNav = asideMenuConfig.find((menuConfig) => {
-      return menuConfig.children && menuConfig.children.some(child => child.path === pathname)
-    })
+      return menuConfig.children && menuConfig.children.some(child => child.path === pathname);
+    });
 
     if (curSubNav) {
-      setOpenKey(curSubNav.name)
+      setOpenKey(curSubNav.name);
     }
   }, [pathname]);
   return (

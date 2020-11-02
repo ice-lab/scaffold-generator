@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Shell, ConfigProvider } from '@alifd/next';
 
-; (function () {
+(function () {
   const throttle = function (type: string, name: string, obj: Window = window) {
     let running = false;
     const func = () => {
@@ -29,7 +29,7 @@ export default function BasicLayout({ children }: { children: React.ReactNode })
     const isPhone = typeof navigator !== 'undefined'
       && navigator
       && navigator.userAgent.match(/phone/gi);
-  
+
     if (width < 680 || isPhone) {
       return 'phone';
     } else if (width < 1280 && width > 680) {
@@ -42,7 +42,7 @@ export default function BasicLayout({ children }: { children: React.ReactNode })
   const [device, setDevice] = useState(getDevice(NaN));
   if (typeof window !== 'undefined') {
     window.addEventListener('optimizedResize', e => {
-      const deviceWidth = e && e.target && (e.target as Window).innerWidth  || NaN;
+      const deviceWidth = (e && e.target && (e.target as Window).innerWidth) || NaN;
       setDevice(getDevice(deviceWidth));
     });
   }
@@ -50,20 +50,15 @@ export default function BasicLayout({ children }: { children: React.ReactNode })
   return (
     <ConfigProvider device={device}>
       <Shell type="brand" style={{ minHeight: '100vh' }}>
-        <Shell.Branding>
-        </Shell.Branding>
-        <Shell.Navigation direction="hoz" style={{ marginRight: 10 }}>
-        </Shell.Navigation>
-        <Shell.Action>
-        </Shell.Action>
-        <Shell.Navigation>
-        </Shell.Navigation>
+        <Shell.Branding />
+        <Shell.Navigation direction="hoz" style={{ marginRight: 10 }} />
+        <Shell.Action />
+        <Shell.Navigation />
 
         <Shell.Content>
           {children}
         </Shell.Content>
-        <Shell.Footer>
-        </Shell.Footer>
+        <Shell.Footer />
       </Shell>
     </ConfigProvider>
   );

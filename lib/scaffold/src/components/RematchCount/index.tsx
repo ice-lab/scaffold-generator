@@ -15,10 +15,10 @@ const mapDispatch = (dispatch: Dispatch) => ({
 });
 
 // eslint-disable-next-line no-undef
-type connectedProps = ReturnType<typeof mapState> & ReturnType<typeof mapDispatch>
-type Props = connectedProps
+type connectedProps = ReturnType<typeof mapState> & ReturnType<typeof mapDispatch>;
+type Props = connectedProps;
 
-const Count = (props: Props) =>{
+const Count = (props: Props) => {
   console.log(props);
   return (
     <div style={{ display: 'flex', margin: '20px' }}>

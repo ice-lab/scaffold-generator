@@ -1,7 +1,6 @@
 /**
  * Scripts to check unpublished version and run publish
  */
-import { join } from 'path';
 import { spawnSync } from 'child_process';
 import { IPackageInfo, getPackageInfos } from './getPackageInfos';
 
