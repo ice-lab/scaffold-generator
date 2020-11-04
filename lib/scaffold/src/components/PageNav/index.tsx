@@ -78,6 +78,10 @@ const Navigation = (props, context) => {
   const { pathname } = location;
   const { isCollapse } = context;
 
+  const onMenuOpen = (key: string, extra: any) => {
+    setOpenKey(extra.key);
+  };
+
   useEffect(() => {
     const curSubNav = asideMenuConfig.find((menuConfig) => {
       return menuConfig.children && menuConfig.children.some(child => child.path === pathname);
@@ -99,6 +103,7 @@ const Navigation = (props, context) => {
       iconOnly={isCollapse}
       hasArrow={false}
       mode={isCollapse ? 'popup' : 'inline'}
+      onOpen={onMenuOpen}
     >
       {getNavMenuItems(asideMenuConfig, 0, AUTH_CONFIG)}
     </Nav>
