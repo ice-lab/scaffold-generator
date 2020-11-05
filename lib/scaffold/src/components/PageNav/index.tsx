@@ -85,8 +85,8 @@ const Navigation = (props, context) => {
 
     function checkChildPathExists(menuConfig) {
       return menuConfig.children.some(child => {
-        return child.children ? checkChildPathExists(child) : child.path === pathname
-      })
+        return child.children ? checkChildPathExists(child) : child.path === pathname;
+      });
     }
 
     if (curSubNav && !openKeys.includes(curSubNav.name)) {
