@@ -1,6 +1,6 @@
 {
   "name": "ice-scaffold-generator",
-  "version": "1.1.21",
+  "version": "1.1.22",
   "description": "scaffold generator",
   "main": "lib/index.js",
   "files": [
@@ -47,13 +47,14 @@
     "request-promise-native": "^1.0.8",
     "rimraf": "^3.0.2",
     "semver": "^6.3.0",
-    "sylvanas": "^0.4.2",
+    "transform-ts-to-js": "^0.1.1",
     "tar": "^5.0.5",
     "typescript": "^3.7.2",
     "zlib": "^1.0.5"
   },
   "devDependencies": {
     "@iceworks/spec": "^1.0.0",
+    "@types/node": "^14.14.6",
     "axios": "^0.21.0",
     "eslint": "^6.8.0",
     "husky": "^3.1.0",
