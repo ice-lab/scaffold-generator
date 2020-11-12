@@ -49,7 +49,7 @@ export default function BasicLayout({ children }: { children: React.ReactNode })
 
   return (
     <ConfigProvider device={device}>
-      <Shell type="brand" style={{ minHeight: '100vh' }}>
+      <Shell style={{ minHeight: '100vh' }}>
         <Shell.Branding />
         <Shell.Navigation direction="hoz" style={{ marginRight: 10 }} />
         <Shell.Action />
