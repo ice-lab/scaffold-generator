@@ -7,7 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: nelonoel/branch-name@v1
+      - name: Set branch name
+        run: echo >>$GITHUB_ENV BRANCH_NAME=${GITHUB_REF#refs/heads/}
+      - name: Echo branch name
+        run: echo ${BRANCH_NAME}
       - uses: actions/setup-node@v1
         with:
           node-version: 10
