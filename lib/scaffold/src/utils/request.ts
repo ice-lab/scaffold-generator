@@ -50,7 +50,7 @@ export function useRequest(options) {
    * Method to make request manually
    * @param {object} config - axios config to shallow merged with options before making request
    */
-  async function request(config) {
+  async function axiosRequest(config) {
     try {
       dispatch({
         type: 'init',
@@ -84,7 +84,7 @@ export function useRequest(options) {
 
   return {
     ...state,
-    request,
+    request: axiosRequest,
   };
 }
 

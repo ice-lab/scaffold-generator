@@ -41,7 +41,7 @@ export default function BasicLayout({ children }: { children: React.ReactNode })
 
   const [device, setDevice] = useState(getDevice(NaN));
   if (typeof window !== 'undefined') {
-    window.addEventListener('optimizedResize', e => {
+    window.addEventListener('optimizedResize', (e) => {
       const deviceWidth = (e && e.target && (e.target as Window).innerWidth) || NaN;
       setDevice(getDevice(deviceWidth));
     });
