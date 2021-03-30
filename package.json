@@ -1,6 +1,6 @@
 {
   "name": "ice-scaffold-generator",
-  "version": "1.1.31",
+  "version": "1.1.32",
   "description": "scaffold generator",
   "main": "lib/index.js",
   "files": [
