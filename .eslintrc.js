@@ -5,6 +5,6 @@ module.exports = getESLintConfig('react-ts', {
     'no-console': 'off',
     'no-shadow': 'off',
     '@typescript-eslint/no-require-imports': 'off',
-    '@iceworks/best-practices/no-js-in-ts-project': 'off'
-  }
+    '@iceworks/best-practices/no-js-in-ts-project': 'off',
+  },
 });
