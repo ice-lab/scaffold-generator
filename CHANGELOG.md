@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.32
+
+- [chore] 升级 eslint 版本至 7.x
+
 ## 1.1.31
 
 - [fix] 使用 webpack 打包时，找不到 `lib/configs/` 的配置文件
