@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.32
+
+- [feat] 增加 `IRouterConfig` ts 类型到模板中
+
 ## 1.1.31
 
 - [fix] 使用 webpack 打包时，找不到 `lib/configs/` 的配置文件
