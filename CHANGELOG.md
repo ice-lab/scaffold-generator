@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.33
+
+- [feat] 增加 `IRouterConfig` ts 类型到模板中
+
 ## 1.1.32
 
 - [chore] 升级 eslint 版本至 7.x
