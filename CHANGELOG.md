@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.34
+
+- upgrade react to 17
+- upgrade eslint to 7.x
+
 ## 1.1.33
 
 - [feat] 增加 `IRouterConfig` ts 类型到模板中
