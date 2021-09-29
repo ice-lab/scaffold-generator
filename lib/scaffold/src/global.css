@@ -1,0 +1,5 @@
+@import '@alifd/next/reset.css';
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
