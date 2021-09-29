@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import cookie from 'cookie';
 import { Link } from 'ice';
 
@@ -10,7 +10,7 @@ import Exception from '@/components/Exception';
  * @params {boolean} hidden 无权限时是否直接隐藏
  *
  * 控制页面例子：
- *    import React from 'react';
+ *    import * as React from 'react';
  *    import { withAuth } from '@/components/Auth';
  *     function BasicList() {
  *       return (

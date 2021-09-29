@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Avatar, Overlay, Menu, Icon } from '@alifd/next';
 import styles from './index.module.scss';
 
