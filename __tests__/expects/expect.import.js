@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom';
 import router from './router';
-import './global.scss';
+import './global.css';
 import LocaleProvider from "@/components/LocaleProvider";
 const ICE_CONTAINER = document.getElementById('ice-container');
 
