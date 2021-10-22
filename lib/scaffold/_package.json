@@ -29,7 +29,6 @@
   },
   "devDependencies": {
     "@iceworks/spec": "^1.0.0",
-    "build-plugin-fusion": "^0.1.0",
     "build-plugin-moment-locales": "^0.1.0",
     "eslint": "^7.30.0",
     "ice.js": "^1.0.0",

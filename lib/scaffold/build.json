@@ -1,7 +1,6 @@
 {
   "publicPath": "./",
   "plugins": [
-    "build-plugin-fusion",
     ["build-plugin-moment-locales", {
       "locales": ["zh-cn"]
     }]
