@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.35
+
+- update `ice` map path in tsconfig
+
 ## 1.1.34
 
 - upgrade react to 17
